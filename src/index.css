@@ -1,13 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Play:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #202020;
+  --clr-blue: #6C63FF;
+  --clr-blue-2: #4c46b6;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Play";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ------------------------------------------------------ */
+/* -- NAVIGATION -- */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.nav__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.nav__brand h1 {
+  color: var(--clr-blue);
+  font-size: clamp(1.75em, 4vw, 2.5em);
+  font-weight: 800;
+}
+
+.nav__connect {
+  width: 175px;
+  height: 50px;
+  margin: 0 auto;
+
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Play";
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.nav__connect:hover {
+  background-color: var(--clr-blue-2);
+}
+
+/* ------------------------------------------------------ */
+/* -- FORM -- */
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 600px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  margin: 0 25px
+}
+
+form input[type="text"] {
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  padding: 10px;
+
+  border: 1px solid var(--clr-blue);
+  border-radius: 4px;
+
+  font-size: 1.10em;
+}
+
+form input[type="submit"] {
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+
+  width: 250px;
+  height: 50px;
+  margin: 10px 0;
+  padding: 10px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Play";
+  font-size: 1.10em;
+  font-weight: 400;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--clr-blue-2);
+}
+
+/* ------------------------------------------------------ */
+/* -- IMAGE -- */
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 90%;
+  width: 512px;
+  height: 512px;
+  margin: 0 25px;
+  border: 3px solid var(--clr-blue);
+  border-radius: 4px;
+
+  overflow: hidden;
+}
+
+.image img {
+  width: 512px;
+  height: 512px;
+  border-radius: 6px;
+}
+
+.image__placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image__placeholder p {
+  margin: 0 10px;
+}
+
+/* ------------------------------------------------------ */
+/* -- TEXT -- */
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+  }
 }

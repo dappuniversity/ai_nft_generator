@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# AI NFT Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technology Stack & Tools
 
-## Available Scripts
+- Solidity (Writing Smart Contracts & Tests)
+- Javascript (React & Testing)
+- [Hardhat](https://hardhat.org/) (Development Framework)
+- [Ethers.js](https://docs.ethers.io/v5/) (Blockchain Interaction)
+- [React.js](https://reactjs.org/) (Frontend Framework)
+- [NFT.Storage](https://nft.storage/) (Connection to IPFS)
+- [Hugging Face](https://huggingface.co/) (AI Models)
 
-In the project directory, you can run:
+## Requirements For Initial Setup
+- Install [NodeJS](https://nodejs.org/en/)
 
-### `npm start`
+## Setting Up
+### 1. Clone/Download the Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Install Dependencies:
+`$ npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Setup .env file:
+Before running any scripts, you'll want to create a .env file with the following values (see .env.example):
 
-### `npm test`
+- **REACT_APP_HUGGING_FACE_API_KEY=""**
+- **REACT_APP_NFT_STORAGE_API_KEY=""**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You'll need to create an account on [Hugging Face](https://huggingface.co/), visit your profile settings, and create a read access token. 
 
-### `npm run build`
+You'll also need to create an account on [NFT.Storage](https://nft.storage/), and create a new API key.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Run tests
+`$ npx hardhat test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. Start Hardhat node
+`$ npx hardhat node`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 6. Run deployment script
+In a separate terminal execute:
+`$ npx hardhat run ./scripts/deploy.js --network localhost`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 7. Start frontend
+`$ npm run start`
