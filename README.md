@@ -41,3 +41,5 @@ In a separate terminal execute:
 
 ### 7. Start frontend
 `$ npm run start`
+
+![Alt text for the image](https://github.com/TravisLeeRichardson/ai_nft_generator/blob/dev/preview%20screen.png)
